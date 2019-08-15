@@ -1,0 +1,28 @@
+.form {
+  width: 100%;
+  padding-top: 35px;
+  padding-bottom: 48px;
+  padding-right: 24px;
+  padding-left: 24px;
+  box-sizing: border-box;
+  border-radius: 8px;
+  background-color: #ffffff;
+  text-align: center;
+  box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.15);
+}
+
+.form__title {
+  margin-bottom: 34px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.form__field {
+  margin-bottom: 24px;
+}
+
+.form__button {
+  margin-top: 16px;
+  width: 146px;
+  height: 48px;
+}
