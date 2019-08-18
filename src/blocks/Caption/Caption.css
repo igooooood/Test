@@ -1,0 +1,13 @@
+.caption {
+  border-radius: 4px;
+  background-color: rgba(237, 65, 89, 0.25);
+  padding: 14px 15px;
+  text-align: left;
+}
+
+.caption__text {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--accent-color);
+}

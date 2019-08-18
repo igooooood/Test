@@ -1,9 +1,10 @@
-@import './fonts/stylesheet.css';
+@import './fonts/stylesheet.css'; 
+@import './variables.css'; 
 
 body {
   margin: 0;
   font-family: 'Gotham Pro', sans-serif;
-  color: #262626;
+  color: var(--text-color);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

@@ -12,6 +12,7 @@
   border: 1px solid #f1f1f1;
   border-radius: 4px;
   background-color: #f1f1f1;
+  color: inherit;
   transition: border-color .3s ease-out;
   will-change: border-color;
 }
@@ -22,10 +23,10 @@
 }
 
 .field--error {
-  border-color: #ed4159;
-  color: #ed4159;
+  border-color: var(--accent-color);
+  color: var(--accent-color);
 }
 
 .field--error:focus {
-  border-color: #ed4159;
+  border-color: var(--accent-color);
 }

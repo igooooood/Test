@@ -1,4 +1,4 @@
-.App {
+.app {
   height: 100vh;
   background-image: linear-gradient(151deg, #ff435d, #b0208e);
   text-align: center;
@@ -6,11 +6,15 @@
   /* TODO: для десктопа вставит картинку */
 }
 
-.App__logo {
+.app__logo {
   margin-top: 44px;
   margin-left: -5px; /* Для того что бы попасть в ПП */
 }
 
-.App__form {
+.app__wrapper {
   margin-top: 33px;
+}
+
+.app__user {
+  margin-bottom: 40px;
 }

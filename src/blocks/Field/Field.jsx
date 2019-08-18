@@ -1,15 +1,17 @@
 import React from 'react';
-import {string, bool} from 'prop-types';
+import {string, bool, func} from 'prop-types';
 import cn from 'classnames';
 
 import './Field.css'
 
-const Field = ({className, placeholder, type, name, isError}) => 
+const Field = ({className, placeholder, type, name, value, onChange, isError}) => 
   <input
     className={cn('field', {'field--error': isError}, className)}
     placeholder={placeholder}
     type={type}
     name={name}
+    value={value}
+    onChange={onChange}
   />
 
 export default Field;
@@ -19,5 +21,7 @@ Field.propTypes = {
   placeholder: string,
   type: string,
   name: string,
-  isError: bool
+  value: string,
+  isError: bool,
+  onChange: func,
 };
