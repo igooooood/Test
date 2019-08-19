@@ -1,0 +1,54 @@
+@import "./styles/variables.scss";
+
+.app {
+  min-height: 100vh;
+
+  text-align: center;
+
+  background-image: linear-gradient(151deg, #ff435d, #b0208e);
+
+  @media (min-width: $desktop) {
+    background-image: url("./images/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url("./images/background@2x.jpg");
+    }
+
+    @media (min-resolution: 216dpi), (min-resolution: 2.5dppx) {
+      background-image: url("./images/background@3x.jpg");
+    }
+  }
+
+  &__logo {
+    margin-top: 44px;
+    margin-left: -5px;
+    /* Для того что бы попасть в ПП */
+
+    @media (min-width: $desktop) {
+      margin-top: 100px;
+    }
+
+    @media (min-width: $desktop-xl) {
+      margin-top: 141px;
+      margin-left: -28px;
+    }
+  }
+
+  &__wrapper {
+    margin-top: 32px;
+
+    @media (min-width: $desktop-xl) {
+      margin-top: 121px;
+    }
+  }
+
+  &__user {
+    margin-bottom: 38px;
+
+    @media (min-width: $desktop-xl) {
+      margin-bottom: 56px;
+    }
+  }
+}
