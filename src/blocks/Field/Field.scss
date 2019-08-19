@@ -21,6 +21,8 @@
   transition: border-color 0.3s ease-out;
 
   will-change: border-color;
+
+  -webkit-appearance: none;
 }
 
 .field:focus {
