@@ -1,0 +1,29 @@
+@import "./normalize.css";
+@import "../fonts/stylesheet.scss";
+@import "./variables.scss";
+
+body {
+  margin: 0;
+
+  font-family: $main-font-family;
+  color: $text-color;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h2,
+h1 {
+  margin: 0;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+
+  border: none;
+}
+
+legend {
+  padding: 0;
+}

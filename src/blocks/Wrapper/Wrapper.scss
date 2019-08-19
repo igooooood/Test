@@ -1,0 +1,28 @@
+@import "../../styles/variables.scss";
+
+.wrapper {
+  box-sizing: border-box;
+  max-width: 600px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 34px;
+  padding-right: 24px;
+  padding-bottom: 48px;
+  padding-left: 24px;
+
+  text-align: center;
+
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.15);
+
+  @media (min-width: $tablet) {
+    padding-right: 48px;
+    padding-left: 48px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-top: 50px;
+    padding-bottom: 60px;
+  }
+}
