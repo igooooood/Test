@@ -2,13 +2,12 @@ import React, { Component } from 'react';
 
 import App from './App'
 
-import './App.css';
-
 class AppCoontainer extends Component {
   state = {
-    mail: 'user@example.com',
-    password: 'mercdev',
+    mail: '',
+    password: '',
     isErrorRequest: false,
+    isButtonDisabled: false,
     isLoginSuccessful: false,
     user: {
       name: '',
@@ -18,7 +17,11 @@ class AppCoontainer extends Component {
 
   login = (event) => {
     event.preventDefault();
-  
+    this.setState({
+      isButtonDisabled: true
+    });
+    
+
     fetch("https://us-central1-mercdev-academy.cloudfunctions.net/login", {
       "method": "POST",
       "headers": {
@@ -31,31 +34,33 @@ class AppCoontainer extends Component {
         }
       )
     })
-    .then(response => {
-      if (response.status === 200) {
-        response.json().then(
-          ({name, photoUrl}) => {
-            this.setState({
-              user: {
-                name,
-                photoUrl
-              },
-            });
-          }
-        )
-        this.setState({
-          isLoginSuccessful: true,
-          isErrorRequest: false,
-          mail: '',
-          password: ''
-        });
-      } else {
-        this.setState({
-          isErrorRequest: true
-        });
-      }
-    })
-    .catch(err => console.log(err));
+      .then(response => {
+        if (response.status === 200) {
+          response.json().then(
+            ({ name, photoUrl }) => {
+              this.setState({
+                user: {
+                  name,
+                  photoUrl
+                },
+              });
+            }
+          )
+          this.setState({
+            isLoginSuccessful: true,
+            isButtonDisabled: false,
+            isErrorRequest: false,
+            mail: '',
+            password: ''
+          });
+        } else {
+          this.setState({
+            isErrorRequest: true,
+            isButtonDisabled: false
+          });
+        }
+      })
+      .catch(err => console.log(err));
   };
 
   logout = () => {
@@ -81,7 +86,7 @@ class AppCoontainer extends Component {
   }
 
   render() {
-    const { mail,password, isErrorRequest, isLoginSuccessful, user } = this.state;
+    const { mail, password, isErrorRequest, isLoginSuccessful, isButtonDisabled, user } = this.state;
     return (
       <App
         userData={user}
@@ -89,6 +94,7 @@ class AppCoontainer extends Component {
         valueFieldPassword={password}
         isLoginSuccessful={isLoginSuccessful}
         isErrorRequest={isErrorRequest}
+        isButtonDisabled={isButtonDisabled}
         handleLogin={this.login}
         handleLogout={this.logout}
         handleChangeName={this.handleChangeName}
@@ -97,6 +103,6 @@ class AppCoontainer extends Component {
     );
   }
 }
-  
+
 
 export default AppCoontainer;

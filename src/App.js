@@ -9,13 +9,14 @@ import User from './blocks/User/User';
 import Button from './blocks/Button/Button';
 import Form from './blocks/Form/Form';
 
-import './App.css';
+import './App.scss';
 
 const App = ({
   userData,
   valueFieldMail,
   valueFieldPassword,
   isLoginSuccessful,
+  isButtonDisabled,
   isErrorRequest,
   handleLogin,
   handleLogout,
@@ -39,6 +40,7 @@ const App = ({
               mail={valueFieldMail}
               password={valueFieldPassword}
               isError={isErrorRequest}
+              isButtonDisabled={isButtonDisabled}
               handleLogin={handleLogin}
               handleChangeMail={handleChangeName}
               handleChangePassword={handleChangePassword}
@@ -56,6 +58,7 @@ App.propTypes = {
   valueFieldPassword: string.isRequired,
   isErrorRequest: bool.isRequired,
   isLoginSuccessful: bool.isRequired,
+  isButtonDisabled: bool,
   handleLogin: func.isRequired,
   handleLogout: func.isRequired,
   handleChangeName: func.isRequired,
@@ -65,7 +68,3 @@ App.propTypes = {
     photoUrl: string.isRequired
   }),   
 };
-
-
-// TODO: класс с большой буквы, исправить!
-// TODO: разделить импорты

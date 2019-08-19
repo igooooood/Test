@@ -3,11 +3,11 @@ import React from 'react';
 import { node, string } from 'prop-types';
 import cn from 'classnames';
 
-import './Wrapper.css';
+import './Wrapper.scss';
 
-const Wrapper = ({ children, className }) => 
+const Wrapper = ({ children, className }) =>
   <div className={cn('wrapper', className)}>
-    <span>{children}</span>
+    {children}
   </div>
 
 export default Wrapper;

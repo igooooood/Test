@@ -3,11 +3,11 @@ import React from 'react';
 import { string } from 'prop-types'
 import cn from 'classnames';
 
-import './User.css'
+import './User.scss'
 
-const User = ({className, pathImg, name}) =>
+const User = ({ className, pathImg, name }) =>
   <div className={cn('user', className)}>
-    <img className='user__avatar' src={pathImg} alt={name}/>
+    <img className='user__avatar' src={pathImg} alt={name} />
     <span className='user__name'>{name}</span>
   </div>
 
