@@ -1,0 +1,46 @@
+.form__title {
+  margin-bottom: 31px;
+
+  border: none;
+
+  font-weight: bold;
+  font-size: 20px;
+}
+
+@media (min-width: 1024px) {
+  .form__title {
+    margin-bottom: 49px;
+
+    font-size: 24px;
+  }
+}
+
+.form__field {
+  margin-bottom: 24px;
+}
+
+@media (min-width: 1024px) {
+  .form__field {
+    margin-bottom: 32px;
+  }
+}
+
+.form__caption {
+  margin-bottom: 24px;
+}
+
+@media (min-width: 1024px) {
+  .form__caption {
+    margin-bottom: 32px;
+  }
+}
+
+.form__button {
+  width: 146px;
+  height: 48px;
+  margin-top: 16px;
+}
+
+.form--hide {
+  display: none;
+}
